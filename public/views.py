@@ -2,4 +2,6 @@ from django.shortcuts import render
 from django.http import *
 
 def index(request):
-    return HttpResponse("<h1>This is amazing cosing...</h1>")
+    template_name="public/index.html"
+    context={}
+    return render(request,template_name,context)

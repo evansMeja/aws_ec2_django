@@ -56,7 +56,7 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,4 +123,8 @@ STATIC_URL = '/static/'
 #STATIC_ROOT = '/home/ubuntu/aws_ec2_django/static'
 
 STATICFILES_DIRS = ('assets',)
-STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
